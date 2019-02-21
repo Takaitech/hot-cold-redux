@@ -16,7 +16,7 @@ export default (state = initialState, action) => {
       guesses: [],
       feedback: 'Make your guess!',
       auralStatus: '',
-      correctAnswer: Math.floor(Math.random() * 100) + 1
+      correctAnswer: action.correctAnswer
     });
   }
 

@@ -4,7 +4,7 @@ import GuessList from './guess-list';
 import GuessCount from './guess-count';
 import AuralStatus from './aural-status';
 
-export function StatusSection(props) {
+export default function StatusSection(props) {
   const { guesses, auralStatus } = props;
   const guessCount = guesses.length;
 
@@ -16,11 +16,3 @@ export function StatusSection(props) {
     </section>
   );
 }
-
-
-export const mapStateToProps = state => ({
-  auralStatus: state.auralStatus,
-  guesses: state.guesses
-});
-
-export default connect(mapStateToProps)(StatusSection);
